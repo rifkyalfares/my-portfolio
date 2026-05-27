@@ -1,11 +1,9 @@
-import payload from 'payload'
+import { getPayload } from 'payload'
+import config from '../payload.config'
 import 'dotenv/config'
 
 const seed = async () => {
-  await payload.init({
-    secret: process.env.PAYLOAD_SECRET!,
-    local: true,
-  })
+  const payload = await getPayload({ config })
 
   // Skills
   const skillsData = [
