@@ -28,42 +28,42 @@ const seed = async () => {
   // Projects
   const projectsData = [
     {
-      title: 'Project Alpha',
-      slug: 'project-alpha',
-      description: 'Aplikasi fullstack dengan Next.js dan Anthropic Claude sebagai AI layer.',
-      stack: [{ name: 'Next.js' }, { name: 'Anthropic' }, { name: 'PostgreSQL' }],
-      ai_role: 'Generative AI untuk fitur X',
-      github_url: 'https://github.com/rifkyalfares/project-alpha',
+      title: 'AI Chat Platform',
+      slug: 'ai-chat-platform',
+      description: 'Platform chat fullstack dengan Next.js dan Anthropic Claude — streaming responses, conversation history, dan role-based access.',
+      stack: [{ name: 'Next.js' }, { name: 'Anthropic' }, { name: 'PostgreSQL' }, { name: 'Docker' }],
+      ai_role: 'Claude sebagai AI engine: streaming completion, tool use untuk web search, dan summarization percakapan otomatis.',
+      github_url: 'https://github.com/rifkyalfares',
     },
     {
-      title: 'Project Beta',
-      slug: 'project-beta',
-      description: 'REST API Laravel dengan integrasi Gemini untuk summarization otomatis.',
-      stack: [{ name: 'Laravel' }, { name: 'Gemini' }, { name: 'MySQL' }],
-      ai_role: 'Summarization pipeline',
-      github_url: 'https://github.com/rifkyalfares/project-beta',
+      title: 'Document Summarizer API',
+      slug: 'document-summarizer-api',
+      description: 'REST API Laravel untuk summarization dokumen otomatis menggunakan Gemini — support PDF, DOCX, dan plain text.',
+      stack: [{ name: 'Laravel' }, { name: 'Gemini' }, { name: 'MySQL' }, { name: 'Docker' }],
+      ai_role: 'Gemini sebagai summarization engine dengan chunking strategy untuk dokumen panjang.',
+      github_url: 'https://github.com/rifkyalfares',
     },
     {
-      title: 'Project Gamma',
-      slug: 'project-gamma',
-      description: 'Dashboard analytics real-time dengan React dan Node.js.',
-      stack: [{ name: 'React' }, { name: 'Node.js' }, { name: 'Docker' }],
+      title: 'Realtime Analytics Dashboard',
+      slug: 'realtime-analytics-dashboard',
+      description: 'Dashboard analytics real-time dengan React, Node.js, dan WebSocket — visualisasi event stream dan alerting.',
+      stack: [{ name: 'React' }, { name: 'Node.js' }, { name: 'PostgreSQL' }, { name: 'Docker' }],
       ai_role: '',
-      github_url: 'https://github.com/rifkyalfares/project-gamma',
+      github_url: 'https://github.com/rifkyalfares',
     },
   ]
   for (const project of projectsData) {
     await payload.create({ collection: 'projects', data: project })
   }
 
-  // Experience
+  // Experience — update via CMS admin with real data
   await payload.create({
     collection: 'experience',
     data: {
-      company: 'Company Name',
+      company: 'Your Company',
       role: 'Full Stack Engineer',
       start_date: '2022-01-01',
-      description: 'Membangun dan memelihara aplikasi web fullstack.',
+      description: 'Update entry ini lewat CMS admin dengan data experience yang sebenarnya.',
     },
   })
 
@@ -75,7 +75,31 @@ const seed = async () => {
       slug: 'how-i-build-with-ai',
       published_at: new Date().toISOString(),
       tags: [{ tag: 'AI' }, { tag: 'Engineering' }],
-      content: { root: { children: [] } },
+      content: {
+        root: {
+          type: 'root',
+          children: [
+            {
+              type: 'heading',
+              tag: 'h2',
+              children: [{ type: 'text', text: 'Bukan sekadar Copilot' }],
+            },
+            {
+              type: 'paragraph',
+              children: [{ type: 'text', text: 'Kebanyakan developer pakai AI sebagai autocomplete. Saya memakainya sebagai thought partner — mulai dari desain arsitektur, debugging, hingga menulis prompt yang tepat untuk fitur spesifik.' }],
+            },
+            {
+              type: 'heading',
+              tag: 'h2',
+              children: [{ type: 'text', text: 'Agentic workflow' }],
+            },
+            {
+              type: 'paragraph',
+              children: [{ type: 'text', text: 'Saya membangun agentic workflow menggunakan Anthropic SDK — tool use, multi-step reasoning, dan integrasi ke sistem produksi nyata. Bukan demo, bukan proof of concept.' }],
+            },
+          ],
+        },
+      },
     },
   })
 

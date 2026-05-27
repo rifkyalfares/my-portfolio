@@ -1,8 +1,10 @@
 import { getBlogPost, getBlogPosts } from '@/lib/api'
 import Footer from '@/components/layout/Footer'
+import RichText from '@/components/ui/RichText'
 import { notFound } from 'next/navigation'
 
 export const revalidate = 3600
+export const dynamicParams = true
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts()
@@ -25,10 +27,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         <p className="mb-10 text-sm text-white/30">
           {new Date(post.published_at).toLocaleDateString('en-US', { dateStyle: 'long' })}
         </p>
-        {/* Rich text rendering — simple placeholder, replace with @payloadcms/richtext-lexical renderer */}
-        <div className="prose prose-invert max-w-none text-white/60">
-          <p>Article content rendered here via Payload rich text.</p>
-        </div>
+        <RichText content={post.content} />
       </section>
       <Footer />
     </>

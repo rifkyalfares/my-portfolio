@@ -3,6 +3,7 @@ import Footer from '@/components/layout/Footer'
 import { notFound } from 'next/navigation'
 
 export const revalidate = 3600
+export const dynamicParams = true
 
 export async function generateStaticParams() {
   const projects = await getProjects()

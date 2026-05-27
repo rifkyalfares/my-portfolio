@@ -26,6 +26,7 @@ export default function Hero() {
           </a>
           <a
             href="/cv.pdf"
+            download
             className="rounded-xl border border-white/[0.06] px-6 py-3 text-sm text-white/60 transition-colors hover:text-white"
           >
             Download CV

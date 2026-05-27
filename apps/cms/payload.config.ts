@@ -5,11 +5,12 @@ import Projects from './src/collections/Projects'
 import BlogPosts from './src/collections/BlogPosts'
 import Skills from './src/collections/Skills'
 import Experience from './src/collections/Experience'
+import Users from './src/collections/Users'
 
 export default buildConfig({
   serverURL: process.env.SERVER_URL || 'http://localhost:3001',
   admin: { user: 'users' },
-  collections: [Projects, BlogPosts, Skills, Experience],
+  collections: [Users, Projects, BlogPosts, Skills, Experience],
   editor: lexicalEditor({}),
   db: postgresAdapter({
     pool: { connectionString: process.env.DATABASE_URI },
