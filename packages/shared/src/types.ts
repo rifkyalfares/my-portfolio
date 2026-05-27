@@ -2,7 +2,7 @@ export interface Project {
   id: string
   title: string
   description: string
-  stack: string[]
+  stack: { name: string }[]
   ai_role: string
   github_url?: string
   live_url?: string
@@ -16,7 +16,7 @@ export interface BlogPost {
   slug: string
   content: Record<string, unknown> // Payload rich text
   published_at: string
-  tags: string[]
+  tags: { tag: string }[]
 }
 
 export interface Skill {
