@@ -1,0 +1,10 @@
+{
+  "name": "my-portfolio",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev:cms": "npm run dev --workspace=apps/cms",
+    "dev:frontend": "npm run dev --workspace=apps/frontend",
+    "build": "npm run build --workspace=apps/frontend"
+  }
+}

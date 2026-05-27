@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: portfolio
+      POSTGRES_PASSWORD: portfolio
+      POSTGRES_DB: portfolio
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  cms:
+    build: ./apps/cms
+    ports:
+      - '3001:3001'
+    environment:
+      DATABASE_URI: postgresql://portfolio:portfolio@postgres:5432/portfolio
+      PAYLOAD_SECRET: changeme_in_production
+      PORT: 3001
+    depends_on:
+      - postgres
+    volumes:
+      - ./apps/cms:/app
+      - /app/node_modules
+
+  frontend:
+    build: ./apps/frontend
+    ports:
+      - '3000:3000'
+    environment:
+      NEXT_PUBLIC_CMS_URL: http://cms:3001
+    depends_on:
+      - cms
+
+volumes:
+  postgres_data:
