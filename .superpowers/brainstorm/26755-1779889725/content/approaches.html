@@ -1,0 +1,57 @@
+<h2>3 Pendekatan Arsitektur</h2>
+<p class="subtitle">Pilih satu — ini menentukan struktur folder, deploy strategy, dan kompleksitas</p>
+
+<div class="cards">
+  <div class="card" data-choice="monorepo" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#050510;padding:16px;border-radius:8px;min-height:130px;font-family:monospace;font-size:10px;display:flex;flex-direction:column;justify-content:center;gap:4px;border:1px solid #1e1e3f">
+      <div style="color:#6366f1">my-portfolio/</div>
+      <div style="color:#94a3b8;padding-left:12px">├── app/          <span style="color:#444"># Next.js frontend</span></div>
+      <div style="color:#94a3b8;padding-left:12px">├── admin/        <span style="color:#444"># Payload CMS</span></div>
+      <div style="color:#94a3b8;padding-left:12px">├── docker-compose.yml</div>
+      <div style="color:#4ade80;padding-left:12px">└── shared/       <span style="color:#444"># types, utils</span></div>
+    </div>
+    <div class="card-body">
+      <h3>A — Monorepo (Recommended)</h3>
+      <p>Frontend + Payload CMS dalam satu repo. Shared types. Deploy via Docker Compose. Paling clean untuk solo dev.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul><li>Satu repo, satu deploy</li><li>Shared TypeScript types</li><li>Docker siap pakai</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Sedikit lebih kompleks setup awal</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="separate" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#050510;padding:16px;border-radius:8px;min-height:130px;font-family:monospace;font-size:10px;display:flex;flex-direction:column;justify-content:center;gap:4px;border:1px solid #1e1e3f">
+      <div style="color:#f59e0b">portfolio-frontend/  <span style="color:#444"># repo 1</span></div>
+      <div style="color:#94a3b8;padding-left:12px">└── Next.js + Tailwind</div>
+      <div style="color:#ec4899;margin-top:8px">portfolio-cms/       <span style="color:#444"># repo 2</span></div>
+      <div style="color:#94a3b8;padding-left:12px">└── Payload CMS</div>
+    </div>
+    <div class="card-body">
+      <h3>B — Separate Repos</h3>
+      <p>Frontend dan CMS repo terpisah. Independent deploy. Lebih fleksibel tapi overhead koordinasi lebih tinggi.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul><li>Deploy independent</li><li>Swap CMS mudah</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>2 repo dikelola</li><li>Type sync manual</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="integrated" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#050510;padding:16px;border-radius:8px;min-height:130px;font-family:monospace;font-size:10px;display:flex;flex-direction:column;justify-content:center;gap:4px;border:1px solid #1e1e3f">
+      <div style="color:#22c55e">my-portfolio/</div>
+      <div style="color:#94a3b8;padding-left:12px">├── app/</div>
+      <div style="color:#94a3b8;padding-left:24px">├── (frontend)/   <span style="color:#444"># public pages</span></div>
+      <div style="color:#94a3b8;padding-left:24px">└── (payload)/    <span style="color:#444"># CMS admin</span></div>
+      <div style="color:#94a3b8;padding-left:12px">└── payload.config.ts</div>
+    </div>
+    <div class="card-body">
+      <h3>C — Fully Integrated (Payload dalam Next.js)</h3>
+      <p>Payload CMS dijalankan dalam satu Next.js app. Satu server, satu deploy. Paling simple tapi tightly coupled.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul><li>Satu server saja</li><li>Deploy paling simple</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Frontend + CMS tightly coupled</li><li>Scale lebih sulit</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<h2>3 Alternatif Layout — Dark</h2>
+<p class="subtitle">Pilih yang paling cocok dengan vibe kamu</p>
+
+<div class="cards">
+
+  <!-- Option A: Motion-Driven OLED -->
+  <div class="card" data-choice="oled-motion" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#000000;padding:0;border-radius:8px;min-height:160px;overflow:hidden;font-family:sans-serif">
+      <!-- Navbar -->
+      <div style="background:rgba(0,0,0,0.9);border-bottom:1px solid #1a1a1a;padding:10px 16px;display:flex;justify-content:space-between;align-items:center">
+        <div style="color:#fff;font-weight:800;font-size:12px;letter-spacing:-0.5px">rifky<span style="color:#2563EB">.</span>dev</div>
+        <div style="display:flex;gap:14px;color:#555;font-size:9px">
+          <span>Work</span><span>About</span><span style="color:#2563EB;border-bottom:1px solid #2563EB;padding-bottom:1px">Blog</span>
+        </div>
+      </div>
+      <!-- Hero -->
+      <div style="padding:20px 16px">
+        <div style="color:#333;font-size:9px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px">FULL STACK × AI</div>
+        <div style="color:#ffffff;font-size:22px;font-weight:900;letter-spacing:-1px;line-height:1.1;margin-bottom:10px">Building<br/>smarter<br/><span style="color:#2563EB">software.</span></div>
+        <div style="display:flex;gap:6px;margin-top:12px">
+          <div style="width:8px;height:8px;border-radius:50%;background:#2563EB"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#333"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#333"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — OLED Minimal + Motion</h3>
+      <p>Pure black #000, biru aksen tunggal, tipografi bold besar. Scroll-driven entrance animation. Clean, confident, timeless. Seperti Linear.app tapi lebih personal.</p>
+    </div>
+  </div>
+
+  <!-- Option B: Cyberpunk Terminal -->
+  <div class="card" data-choice="cyberpunk-terminal" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0D0D0D;padding:0;border-radius:8px;min-height:160px;overflow:hidden;font-family:'Courier New',monospace">
+      <!-- Terminal header -->
+      <div style="background:#1a1a1a;border-bottom:1px solid #00FF00;padding:8px 12px;display:flex;align-items:center;gap:6px">
+        <div style="width:8px;height:8px;border-radius:50%;background:#ff5f56"></div>
+        <div style="width:8px;height:8px;border-radius:50%;background:#ffbd2e"></div>
+        <div style="width:8px;height:8px;border-radius:50%;background:#27c93f"></div>
+        <span style="color:#555;font-size:9px;margin-left:8px">rifky@portfolio ~ %</span>
+      </div>
+      <!-- Terminal body -->
+      <div style="padding:14px 16px;display:flex;flex-direction:column;gap:5px">
+        <div style="color:#555;font-size:9px">$ whoami</div>
+        <div style="color:#00FF00;font-size:10px;text-shadow:0 0 8px rgba(0,255,0,0.5)">Rifky Alfares — AI-Native Full Stack Engineer</div>
+        <div style="color:#555;font-size:9px;margin-top:4px">$ cat skills.txt</div>
+        <div style="color:#00FF00;font-size:9px;opacity:0.8">React · Next.js · Laravel · Node · Anthropic · Gemini · Docker</div>
+        <div style="color:#555;font-size:9px;margin-top:4px">$ ./show_projects<span style="color:#00FF00;animation:blink 1s infinite">█</span></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Cyberpunk Terminal</h3>
+      <p>Terminal green on pure black. Monospace, CLI aesthetic, glitch/scanline effect halus. Typewriter animation saat load. Unique, memorable, sangat "dev identity".</p>
+    </div>
+  </div>
+
+  <!-- Option C: Dark Glassmorphism Premium -->
+  <div class="card" data-choice="dark-glass-premium" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:linear-gradient(135deg,#0a0a0a 0%,#0d0d1a 50%,#0a0f0a 100%);padding:0;border-radius:8px;min-height:160px;overflow:hidden;font-family:sans-serif;position:relative">
+      <!-- Ambient glow -->
+      <div style="position:absolute;top:-30px;right:-30px;width:150px;height:150px;background:radial-gradient(circle,rgba(0,255,136,0.12),transparent 70%);pointer-events:none"></div>
+      <div style="position:absolute;bottom:-20px;left:-20px;width:120px;height:120px;background:radial-gradient(circle,rgba(99,102,241,0.1),transparent 70%);pointer-events:none"></div>
+      <!-- Floating card nav -->
+      <div style="margin:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(10px)">
+        <div style="color:#fff;font-weight:700;font-size:11px">RA</div>
+        <div style="display:flex;gap:12px;color:rgba(255,255,255,0.4);font-size:9px">
+          <span>Projects</span><span>Blog</span><span style="color:#00ff88">Hire Me</span>
+        </div>
+      </div>
+      <!-- Hero content -->
+      <div style="padding:8px 16px 16px">
+        <div style="color:rgba(0,255,136,0.7);font-size:9px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px">AI-NATIVE ENGINEER</div>
+        <div style="color:#ffffff;font-size:18px;font-weight:700;line-height:1.2;margin-bottom:6px">Rifky Alfares</div>
+        <div style="color:rgba(255,255,255,0.4);font-size:9px;line-height:1.6">"I don't just use AI tools —<br/>I think with them."</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Dark Glass Premium</h3>
+      <p>Deep dark + ambient glow hijau/ungu di background. Floating glass navbar. Aksen hijau mint sebagai warna AI. Futuristik tapi elegan — beda dari purple sebelumnya.</p>
+    </div>
+  </div>
+
+</div>

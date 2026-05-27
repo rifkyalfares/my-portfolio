@@ -1,0 +1,75 @@
+<h2>3 Konsep Design Baru</h2>
+<p class="subtitle">Beda total dari sebelumnya — klik yang paling menarik</p>
+
+<div class="options">
+
+  <!-- Concept 1: Aurora Dark -->
+  <div class="option" data-choice="aurora-dark" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Aurora Dark</h3>
+      <div style="background:#050510;border-radius:8px;padding:20px;margin:10px 0;position:relative;overflow:hidden;min-height:120px">
+        <!-- Aurora blobs -->
+        <div style="position:absolute;top:-40px;left:-20px;width:200px;height:200px;background:radial-gradient(circle,rgba(0,128,255,0.25),transparent 65%);pointer-events:none"></div>
+        <div style="position:absolute;bottom:-40px;right:-20px;width:180px;height:180px;background:radial-gradient(circle,rgba(255,20,147,0.2),transparent 65%);pointer-events:none"></div>
+        <div style="position:absolute;top:20px;right:30px;width:120px;height:120px;background:radial-gradient(circle,rgba(0,255,255,0.12),transparent 65%);pointer-events:none"></div>
+        <!-- Content -->
+        <div style="position:relative;font-family:sans-serif">
+          <div style="color:rgba(255,255,255,0.4);font-size:9px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px">AI-NATIVE ENGINEER</div>
+          <div style="color:#fff;font-size:22px;font-weight:800;line-height:1.15;margin-bottom:8px">Rifky<br/>Alfares</div>
+          <div style="display:flex;gap:6px">
+            <span style="background:rgba(0,128,255,0.2);border:1px solid rgba(0,128,255,0.4);color:#60a5fa;font-size:9px;padding:2px 8px;border-radius:20px">React</span>
+            <span style="background:rgba(255,20,147,0.15);border:1px solid rgba(255,20,147,0.3);color:#f472b6;font-size:9px;padding:2px 8px;border-radius:20px">AI</span>
+            <span style="background:rgba(0,255,255,0.1);border:1px solid rgba(0,255,255,0.2);color:#67e8f9;font-size:9px;padding:2px 8px;border-radius:20px">Node</span>
+          </div>
+        </div>
+      </div>
+      <p style="color:#888;font-size:12px">Dark base + 3 aurora blob (blue/pink/cyan) mengalir di background. Animated 8-12s loop. Vibrant tapi tidak noisy. Cocok untuk kesan "creative engineer".</p>
+    </div>
+  </div>
+
+  <!-- Concept 2: Motion Scroll Storytelling -->
+  <div class="option" data-choice="motion-storytelling" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Motion Scroll Storytelling</h3>
+      <div style="background:#0a0a0a;border-radius:8px;padding:20px;margin:10px 0;font-family:sans-serif;min-height:120px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div style="width:3px;height:40px;background:linear-gradient(to bottom,#fff,transparent);border-radius:2px"></div>
+          <div>
+            <div style="color:#fff;font-size:18px;font-weight:900;letter-spacing:-0.5px;line-height:1">Rifky Alfares</div>
+            <div style="color:#555;font-size:10px;margin-top:2px">Scroll to explore</div>
+          </div>
+        </div>
+        <!-- Simulated scroll sections -->
+        <div style="display:flex;flex-direction:column;gap:6px;padding-left:13px;border-left:1px solid #1a1a1a">
+          <div style="color:#666;font-size:10px;padding:6px 10px;background:#0f0f0f;border-radius:4px">01 — Who I am</div>
+          <div style="color:#999;font-size:10px;padding:6px 10px;background:#111;border-radius:4px;border-left:2px solid #fff">02 — What I build</div>
+          <div style="color:#666;font-size:10px;padding:6px 10px;background:#0f0f0f;border-radius:4px">03 — How I use AI</div>
+        </div>
+      </div>
+      <p style="color:#888;font-size:12px">Scroll-triggered storytelling — setiap section muncul dengan entrance animation. Narasi linear: siapa → karya → AI workflow. Seperti presentasi interaktif, bukan halaman statis.</p>
+    </div>
+  </div>
+
+  <!-- Concept 3: Liquid Glass Dark -->
+  <div class="option" data-choice="liquid-glass" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Liquid Glass Dark</h3>
+      <div style="background:linear-gradient(135deg,#0a0014,#000a1a,#001a0a);border-radius:8px;padding:20px;margin:10px 0;font-family:sans-serif;min-height:120px;position:relative;overflow:hidden">
+        <!-- Morphing blob shapes -->
+        <div style="position:absolute;top:-10px;right:-10px;width:100px;height:100px;background:conic-gradient(from 0deg,rgba(139,92,246,0.3),rgba(6,182,212,0.2),rgba(34,197,94,0.2),rgba(139,92,246,0.3));border-radius:60% 40% 30% 70%/60% 30% 70% 40%;filter:blur(8px);pointer-events:none"></div>
+        <!-- Glass card -->
+        <div style="position:relative;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px;backdrop-filter:blur(12px)">
+          <div style="color:rgba(255,255,255,0.5);font-size:9px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Portfolio</div>
+          <div style="color:#fff;font-size:18px;font-weight:700;margin-bottom:4px">Rifky Alfares</div>
+          <div style="color:rgba(255,255,255,0.4);font-size:10px">Full Stack × AI Engineer</div>
+          <div style="margin-top:10px;width:60px;height:2px;background:linear-gradient(to right,#8b5cf6,#06b6d4);border-radius:2px"></div>
+        </div>
+      </div>
+      <p style="color:#888;font-size:12px">Morphing blob di background (SVG animated), konten di dalam glass card. Warna iridescent ungu/cyan/hijau. Premium, unik, sangat 2025. Kesan: cutting-edge engineer.</p>
+    </div>
+  </div>
+
+</div>
